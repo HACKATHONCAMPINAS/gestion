@@ -1,2 +1,2 @@
 # Gestión
-Aplicação criada para facilitar a gestão da informação e atendimento ao cidadão.
+Aplicação que facilita a gestão da informação e atendimento ao cidadão.
