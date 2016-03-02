@@ -1,2 +1,2 @@
 # gestion
-Aplicativo que disponibiliza informações da prefeitura para facilitar atendimento aos cidadãos
+Aplicativo que disponibiliza informações da prefeitura de Campinas para facilitar o atendimento aos cidadãos.
