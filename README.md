@@ -1,2 +1,2 @@
-# mdlAdmin-lite
-Free Starter Admin Template build on Google Material Design Lite
+# Gestión
+Aplicação criada para facilitar a gestão da informação e atendimento ao cidadão.
