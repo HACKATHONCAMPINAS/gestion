@@ -35,11 +35,9 @@
                     'legend': 'bottom',
                 };
 
-                // Instantiate and draw our chart, passing in some options.
                 var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
                 chart.draw(data, options);
-            }
-            
+            }            
         }
 
         $scope.ObterDominio = function () {
