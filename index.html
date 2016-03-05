@@ -30,20 +30,9 @@
     <link rel="stylesheet" type="text/css" href="css/default.css" />
     <link rel="stylesheet" type="text/css" href="css/component.css" />
 	<link rel="stylesheet" href="css/styles.css">
-    <style>
-        #view-source {
-            position: fixed;
-            display: block;
-            right: 0;
-    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-            bottom: 0;
-            margin-right: 40px;
-            margin-bottom: 40px;
-            z-index: 900;
-        }
-    </style>
+   
 </head>
-<body ng-controller="mainController">
+<body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
             <div class="mdl-layout__header-row">
@@ -108,38 +97,44 @@
 	
 	
 	<div class="container" id="dvPrevencao" style="display:none">	
-			<header class="clearfix">
-				<span>Dicas de Prevenção</span>
-			</header>
-			<div id="cbp-fwslider" class="cbp-fwslider">
-				<ul>
-					<li><a href="#"><img src="images/1.png" alt="img01"/></a></li>
-					<li><a href="#"><img src="images/2.png" alt="img02"/></a></li>
-					<li><a href="#"><img src="images/3.png" alt="img03"/></a></li>
-					<li><a href="#"><img src="images/4.png" alt="img04"/></a></li>
-					<li><a href="#"><img src="images/5.png" alt="img05"/></a></li>
-					<li><a href="#"><img src="images/6.png" alt="img06"/></a></li>
-					<li><a href="#"><img src="images/7.png" alt="img07"/></a></li>
-					<li><a href="#"><img src="images/8.png" alt="img08"/></a></li>
-					<li><a href="#"><img src="images/9.png" alt="img09"/></a></li>
-					<li><a href="#"><img src="images/10.png" alt="img10"/></a></li>
-				</ul>
-			</div>
+		<header class="clearfix">
+			<span>Dicas de Prevenção</span>
+		</header>
+		<div id="cbp-fwslider" class="cbp-fwslider">
+			<ul>
+				<li><a href="#"><img src="images/1.png" alt="img01"/></a></li>
+				<li><a href="#"><img src="images/2.png" alt="img02"/></a></li>
+				<li><a href="#"><img src="images/3.png" alt="img03"/></a></li>
+				<li><a href="#"><img src="images/4.png" alt="img04"/></a></li>
+				<li><a href="#"><img src="images/5.png" alt="img05"/></a></li>
+				<li><a href="#"><img src="images/6.png" alt="img06"/></a></li>
+				<li><a href="#"><img src="images/7.png" alt="img07"/></a></li>
+				<li><a href="#"><img src="images/8.png" alt="img08"/></a></li>
+				<li><a href="#"><img src="images/9.png" alt="img09"/></a></li>
+				<li><a href="#"><img src="images/10.png" alt="img10"/></a></li>
+			</ul>
 		</div>
+	</div>
 		
-    <a href="https://github.com/google/material-design-lite/blob/master/templates/android-dot-com/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Buscar Região</a>
+    <a href="#" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Buscar Região</a>
     <script src="https://code.getmdl.io/1.1.2/material.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="app/controllers/mainController.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>   
+    <script src="bower_components/angular/angular.min.js"></script>    
     <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="bower_components/oclazyload/dist/ocLazyLoad.min.js"></script>
-    <!--<script src="app/modules/angular-retina.js"></script>-->
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="bower_components/angular-ngRoute/ngRoute.js"></script>
+    <script src="bower_components/angular-ngRoute/routeParams.js"></script>
+    <script src="bower_components/underscore/underscore-min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/app.factory.js"></script>
+    <script src="app/services/mainService.js"></script>
+    <script src="app/controllers/mainController.js"></script>
+    
 		<script src="js/jquery.cbpFWSlider.min.js"></script>
 		<script>
 			$( function() {
@@ -157,11 +152,11 @@
 				$( selector ).cbpFWSlider( 'destroy' );
 				*/
 
-				$( '#cbp-fwslider' ).cbpFWSlider();
+				//$( '#cbp-fwslider' ).cbpFWSlider();
 
 			} );
 		</script>
-    <script src="app/app.js"></script>
+    
     
 </body>
 </html>
