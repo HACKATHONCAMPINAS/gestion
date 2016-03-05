@@ -1,23 +1,32 @@
-﻿; "use strict";
+﻿var App = angular.module('GestionApp', ['ngRoute', 'ngCookies']);
 
-var GestionApp = angular.module('GestionApp', [
-    'ui.router',
-    'oc.lazyLoad',
-    'ngSanitize',
-    'ngAnimate',      
-    'ngCookies'
-]);
 
-GestionApp
-    .run([
-        '$rootScope',
-        '$state',
-        '$stateParams',
-        '$http',
-        '$window',
-        '$timeout',                  
-        function ($rootScope, $state, $stateParams, $http, $window, $timeout) {
-
-           
+App.config(function ($routeProvider, $locationProvider) {
+    $routeProvider
+    //.when('/', {
+    //    templateUrl: 'denied.html'
+    //    , caseInsensitiveMatch: true
+    //})
+    //.when('/notfound', {
+    //    templateUrl: 'notfound.html'
+    //            , caseInsensitiveMatch: true
+    //})
+    //.when('/error', {
+    //    templateUrl: 'error.html'
+    //        , caseInsensitiveMatch: true
+    //})
+    
+    .when('/', {
+        //templateUrl: 'app/views/main.html',
+        controller: 'mainController',
+        resolve: {
+            delay: function ($q, $timeout) {
+                var delay = $q.defer();
+                $timeout(delay.resolve, 0);
+                return delay.promise;
+            }
         }
-    ])
+         , caseInsensitiveMatch: true
+    })   
+    .otherwise({ redirectTo: "/notfound" });
+});

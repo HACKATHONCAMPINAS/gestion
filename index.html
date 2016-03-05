@@ -1,80 +1,46 @@
 ﻿<!doctype html>
-<!--
-  Material Design Lite
-  Copyright 2015 Google Inc. All rights reserved.
-
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License
--->
-
 <html lang="en" ng-app="GestionApp">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Android</title>
-    <!-- Page styles -->
+    <title>Gestión</title>
+  
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.1.2/material.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        #view-source {
-            position: fixed;
-            display: block;
-            right: 0;
-            bottom: 0;
-            margin-right: 40px;
-            margin-bottom: 40px;
-            z-index: 900;
-        }
-    </style>
+   
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore-min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ngRoute/ngRoute.js"></script>
+    <script src="bower_components/angular-ngRoute/routeParams.js"></script>
+    
+    <script src="app/app.js"></script>
+    <script src="app/app.factory.js"></script>
+    <script src="app/services/mainService.js"></script>
+    <script src="app/controllers/mainController.js"></script>
 </head>
-<body ng-controller="mainController">
+<body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
             <div class="mdl-layout__header-row">
                 <span class="android-title mdl-layout-title">
                     <img class="android-logo-image" src="images/android-logo.png">
                 </span>
-                <!-- Add spacer, to align navigation to the right in desktop -->
-                <div class="android-header-spacer mdl-layout-spacer"></div>
-                <!--<div class="android-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
-                  <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
-                    <i class="material-icons">search</i>
-                  </label>
-                  <div class="mdl-textfield__expandable-holder">
-                    <input class="mdl-textfield__input" type="text" id="search-field">
-                  </div>
-                </div>-->
-                <!-- Navigation -->
-                <div class="android-navigation-container">
+                <div class="android-header-spacer mdl-layout-spacer"></div>               
+                <!--<div class="android-navigation-container">
                     <nav class="android-navigation mdl-navigation">
                         <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Login</a>
                     </nav>
-                </div>
+                </div>-->
                 <span class="android-mobile-title mdl-layout-title">
                     <img class="android-logo-image" src="images/android-logo.png">
-                </span>
-                <!--<button class="android-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
-                  <i class="material-icons">more_vert</i>
-                </button>
-                <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
-                  <li class="mdl-menu__item">Login</li>
-                </ul>-->
+                </span>               
             </div>
         </div>
-
         <div class="android-drawer mdl-layout__drawer">
             <span class="mdl-layout-title">
                 <img class="android-logo-image" src="images/android-logo-white.png">
@@ -107,78 +73,23 @@
         </div>
 
         <div class="android-content mdl-layout__content">
-            <!--<div id="chart_div"></div>-->
             <div class="mdl-grid">
                 <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-cell--12-col-phone" style="text-align:center">
 
                 </div>
             </div>
-            <div class="grid">
-                <div class="">
-                    <div id="chart_div"></div>
-                </div>
-                <!--<div class="col-1-2">
-                    <div id="chart_div2" class="chart"></div>
-                </div>-->
+            <div class="grid" ng-controller="mainController">                 
+                <div id="chart_div"></div>            
             </div>
-
-
         </div>
     </div>
-    <a href="https://github.com/google/material-design-lite/blob/master/templates/android-dot-com/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Buscar Região</a>
+    <a href="#" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Buscar Região</a>
     <script src="https://code.getmdl.io/1.1.2/material.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="app/controllers/mainController.js"></script>
+
     <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="bower_components/oclazyload/dist/ocLazyLoad.min.js"></script>
-    <!--<script src="app/modules/angular-retina.js"></script>-->
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>   
     <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
-    
-    <script src="app/app.js"></script>
-    <script type="text/javascript">
-
-        // Load the Visualization API and the corechart package.
-        google.charts.load('current', { 'packages': ['corechart'] });
-
-        // Set a callback to run when the Google Visualization API is loaded.
-        google.charts.setOnLoadCallback(drawChart);
-
-        var width = jQuery(window).width();
-        //alert(width)
-        // Callback that creates and populates a data table,
-        // instantiates the pie chart, passes in the data and
-        // draws it.
-        function drawChart() {
-
-            // Create the data table.
-            var data = new google.visualization.DataTable();
-            data.addColumn('string', 'Topping');
-            data.addColumn('number', 'Slices');
-            data.addRows([
-              ['Mushrooms', 3],
-              ['Onions', 1],
-              ['Olives', 1],
-              ['Zucchini', 1],
-              ['Pepperoni', 2]
-            ]);
-
-            // Set chart options
-            var options = {
-                //'title': 'How Much Pizza I Ate Last Night',
-                'width': width,
-                'height': 500,
-                'legend': 'bottom',
-            };
-
-            // Instantiate and draw our chart, passing in some options.
-            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-            chart.draw(data, options);
-        }
-    </script>
-
 </body>
 </html>
