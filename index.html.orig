@@ -27,6 +27,21 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.1.2/material.min.css">
+<<<<<<< HEAD
+    <link rel="stylesheet" href="css/styles.css">
+   
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore-min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-ngRoute/ngRoute.js"></script>
+    <script src="bower_components/angular-ngRoute/routeParams.js"></script>
+    
+    <script src="app/app.js"></script>
+    <script src="app/app.factory.js"></script>
+    <script src="app/services/mainService.js"></script>
+    <script src="app/controllers/mainController.js"></script>
+=======
     <link rel="stylesheet" type="text/css" href="css/default.css" />
     <link rel="stylesheet" type="text/css" href="css/component.css" />
 	<link rel="stylesheet" href="css/styles.css">
@@ -35,13 +50,13 @@
             position: fixed;
             display: block;
             right: 0;
-    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
             bottom: 0;
             margin-right: 40px;
             margin-bottom: 40px;
             z-index: 900;
         }
     </style>
+>>>>>>> e9dd5a3b7aedeb9edddf1210a24c8626f9eb5d85
 </head>
 <body ng-controller="mainController">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
