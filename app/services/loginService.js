@@ -1,11 +1,16 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('GestionApp').service('loginService', function ($http, $rootScope) {
+    angular.module('GestionApp').service('mainService', function ($http, $rootScope) {
 
-        this.login = function (login) {
-            $rootScope.content_preloader_show();
-            return $http.get(param.path.wsPath.concat('/api/Account/Login/'), { params: { username: login.Username, password: login.Password, staySignedIn: login.staySignedIn } })
+        this.ObterDominio = function () {
+           
+            config.headers = {
+                'Content-Type': 'application/json',
+                'AUTH-TOKEN': $cookies.get("AUTH-TOKEN")
+            }
+
+            return $http.get("http://api.ima.sp.gov.br/v1/atendimento", { params: { offset: 0, limit: 100 } })
         }
 
     });

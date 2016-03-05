@@ -15,8 +15,7 @@ GestionApp
         '$stateParams',
         '$http',
         '$window',
-        '$timeout',
-        'preloaders',              
+        '$timeout',                  
         function ($rootScope, $state, $stateParams, $http, $window, $timeout) {
 
            
