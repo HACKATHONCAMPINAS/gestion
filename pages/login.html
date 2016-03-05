@@ -5,11 +5,11 @@
     <link href="../css/material.min.css" rel="stylesheet" />
     <link href="../css/styles.css" rel="stylesheet" />
 </head>
-<body>
+<body>    
     <div class="login">
-        <div class="space">
+        <div class="photo">
         </div>
-        <span>You just need an account to access</span>
+        <span>Sign in with your Google Account</span>
         <form action="" id="login-form">
             <div id="u" class="form-group">
                 <input id="username" spellcheck=false class="form-control" name="username" type="text" size="18" alt="login" required="">
@@ -32,7 +32,7 @@
                 <span class="form-bar"></span>
                 <label for="password" class="float-label">Senha</label>
                 <errorp>
-                    Senha é obrigatório
+                    Password is required
                     <i>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <path d="M0 0h24v24h-24z" fill="none" />
@@ -41,25 +41,13 @@
                     </i>
                 </errorp>
             </div>
-            <div id="c" class="form-group">
-                <input id="region-code" spellcheck=false class="form-control" name="region-code" type="text" size="18" alt="login" required="">
-                <span class="form-highlight"></span>
-                <span class="form-bar"></span>
-                <label for="username" class="float-label">CEP</label>
-                <erroru>
-                    Username is required
-                    <i>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M0 0h24v24h-24z" fill="none" />
-                            <path d="M1 21h22l-11-19-11 19zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z" />
-                        </svg>
-                    </i>
-                </erroru>
-            </div>
-            <div class="form-group">                
-                <button id="submit" type="submit" ripple>Cadastrar</button>
+            <div class="form-group">
+                <input type="checkbox" id="rem">
+                <label for="rem">continuar conectado</label>
+                <button id="submit" type="submit" ripple>Entrar</button>
             </div>
         </form>
-    </div>
+        <footer><a href="#0">Cadastre-se</a></footer>
+    </div>    
 </body>
 </html>
