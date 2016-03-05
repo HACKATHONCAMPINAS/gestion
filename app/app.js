@@ -27,6 +27,18 @@ App.config(function ($routeProvider, $locationProvider) {
             }
         }
          , caseInsensitiveMatch: true
-    })   
+    })
+        .when('/login', {
+            templateUrl: 'app/views/login.html',
+            controller: 'loginController',
+            resolve: {
+                delay: function ($q, $timeout) {
+                    var delay = $q.defer();
+                    $timeout(delay.resolve, 0);
+                    return delay.promise;
+                }
+            }
+         , caseInsensitiveMatch: true
+        })
     .otherwise({ redirectTo: "/notfound" });
 });

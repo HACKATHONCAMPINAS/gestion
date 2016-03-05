@@ -1,4 +1,5 @@
-﻿(function () {
+﻿
+(function () {
     'use strict';
 
     App.controller('mainController', ['$rootScope', '$scope', '$cookies', 'mainService', function ($rootScope, $scope, $cookies, mainService) {
@@ -46,10 +47,9 @@
             mainService.ObterDominio($scope.offset, 100).then(function (result) {
                 $scope.lista.push(result.data)
                 
-                if ($scope.offset < 100) {
+                if ($scope.offset < 1000) {
                     $scope.offset += 100
-                    $scope.ObterDominio()
-                    console.log(result.data)
+                    $scope.ObterDominio()                    
                 } else {   
                     $.each($scope.lista, function (k, v) {
                         $.each(v, function (key, value) {
@@ -74,6 +74,15 @@
                     $scope.loadChart()
                 }
             })          
+        }
+
+        $scope.Buscar = function () {
+            if (!$cookies.get('USERNAME')) {
+                $('.grid').hide()
+                $('.login').show()
+            } else {
+                window.location.href = 'pages/register.html'
+            }
         }
 
         $scope.ObterDominio()
