@@ -1,0 +1,54 @@
+﻿
+<div class="login" id="login">
+    <div class="space">
+    </div>
+    <span>Pesquise seu bairro</span>
+    <form action="" id="login-form">
+        <div id="u" class="form-group">
+            <input id="bairro" ng-model="bairro" spellcheck=false class="form-control" name="username" type="text" size="18" alt="login" required="">
+            <span class="form-highlight"></span>
+            <span class="form-bar"></span>
+            <label for="username" class="float-label">Bairro</label>
+            <erroru>
+                Username is required
+                <i>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24h-24z" fill="none" />
+                        <path d="M1 21h22l-11-19-11 19zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z" />
+                    </svg>
+                </i>
+            </erroru>
+        </div>        
+       
+        <div class="form-group">
+            <a id="submit" ng-click="Buscar()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Buscar</a>
+        </div>
+    </form>
+
+    
+</div>
+
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--4-col"></div>
+    <div class="mdl-cell mdl-cell--4-col">
+        <div class="demo-card-square mdl-card mdl-shadow--2dp" style="display:none">
+            <div class="mdl-card__title mdl-card--expand">
+                <h2 class="mdl-card__title-text" style="color:#810000;font-weight:bolder">Resultado</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                Foi identificado {{ocorrencia}} focos de DENGUE no seu bairro
+            </div>
+        </div>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col"></div>
+</div>
+
+<div class="login" id="resultado" style="display:none">
+
+    <h2 class="mdl-card__title-text" style="color:#810000;font-weight:bolder;text-align:center;padding-top:20px">Resultado</h2><br>
+    <span>Foi identificado {{ocorrencia}} focos de DENGUE no bairro {{bairro}}</span>
+    <div class="form-group">
+        <a id="submit" ng-click="NovaBusca()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Nova pesquisa</a>
+    </div>
+</div>
+

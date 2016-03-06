@@ -1,53 +1,25 @@
-﻿<!--<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
-    <link href="../css/material.min.css" rel="stylesheet" />
-    <link href="../css/styles.css" rel="stylesheet" />
-</head>
-<body>-->    
-    <div class="login">
-        <div class="photo">
+﻿<div class="login">
+    <div class="space">
+    </div>
+    <span>Sign in with your Google Account</span>
+    <form action="" id="login-form" no-validate>
+        <div id="u" class="form-group">
+            <input id="username" ng-model="username" spellcheck=false class="form-control" name="username" type="text" size="18" alt="login" required="">
+            <span class="form-highlight"></span>
+            <span class="form-bar"></span>
+            <label for="username" class="float-label">E-mail</label>            
         </div>
-        <span>Sign in with your Google Account</span>
-        <form action="" id="login-form">
-            <div id="u" class="form-group">
-                <input id="username" spellcheck=false class="form-control" name="username" type="text" size="18" alt="login" required="">
-                <span class="form-highlight"></span>
-                <span class="form-bar"></span>
-                <label for="username" class="float-label">Email</label>
-                <erroru>
-                    Username is required
-                    <i>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M0 0h24v24h-24z" fill="none" />
-                            <path d="M1 21h22l-11-19-11 19zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z" />
-                        </svg>
-                    </i>
-                </erroru>
-            </div>
-            <div id="p" class="form-group">
-                <input id="password" class="form-control" spellcheck=false name="password" type="password" size="18" alt="login" required="">
-                <span class="form-highlight"></span>
-                <span class="form-bar"></span>
-                <label for="password" class="float-label">Password</label>
-                <errorp>
-                    Password is required
-                    <i>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M0 0h24v24h-24z" fill="none" />
-                            <path d="M1 21h22l-11-19-11 19zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z" />
-                        </svg>
-                    </i>
-                </errorp>
-            </div>
-            <div class="form-group">
-                <input type="checkbox" id="rem">
-                <label for="rem">Stay Signed in</label>
-                <button id="submit" type="submit" ripple>Sign in</button>
-            </div>
-        </form>
-        <footer><a href="#0">Create an account</a></footer>
-    </div>    
-<!--</body>
-</html>-->
+        <div id="p" class="form-group">
+            <input id="password" ng-model="password" class="form-control" spellcheck=false name="password" type="password" size="18" alt="login" required="">
+            <span class="form-highlight"></span>
+            <span class="form-bar"></span>
+            <label for="password" class="float-label">Senha</label>           
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="rem">
+            <label for="rem">continuar conectado</label>
+            <a id="submit" ng-click="Login()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" ripple>Login</a>
+        </div>
+    </form>
+    <footer><a href="#/register">Criar uma conta</a></footer>
+</div>    

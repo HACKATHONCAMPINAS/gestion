@@ -74,16 +74,7 @@
                     $scope.loadChart()
                 }
             })          
-        }
-
-        $scope.Buscar = function () {
-            if (!$cookies.get('USERNAME')) {
-                $('.grid').hide()
-                $('.login').show()
-            } else {
-                window.location.href = 'pages/register.html'
-            }
-        }
+        }     
 
         $scope.ObterDominio()
     }]);
